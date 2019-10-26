@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <h4>Login</h4>
+        <form method="POST" style="margin-left:30px">
+            <input type="text" name="username" placeholder="username" ng-model="user.username" required
+                class="form-control" />
+            <br /><br />
+            <input type="password" name="password" placeholder="password" ng-model="user.password" required
+                class="form-control" /> <br /><br />
+            <button ng-click="login()" type="submit" class="btn btn-primary" >Login</button>
+        </form>
+    </body>
+</html>

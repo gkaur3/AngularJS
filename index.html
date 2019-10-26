@@ -1,0 +1,60 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+    <!-- to pop up message modal when we click create message <link rel="stylesheet" href="css/angularStrap-modal-animation.css"/> -->
+    <!-- for giving pop up notifications <link rel="stylesheet" href="vendor/AngularJS-Toaster/toaster.min.css"/> -->
+    <!--  icons <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"/> -->
+</head>
+
+<body>
+    <div ng-app="myapp" ng-controller="appController">
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Marlabs</a>
+                </div>
+
+                <div class="header clearfix">
+                    <nav active-menu>
+                        <ul class="nav nav-pills pull-left">
+                            <li><a href="#/signup" ng-if="!isLoggedIn">Sign Up <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li><a href="#/login" ng-if="!isLoggedIn">Login</a></li>
+                            <li><a href="#/home" ng-if="isLoggedIn">Home</a></li>
+                            <li><a href="#/messages" ng-if="isLoggedIn">Message</a></li>
+                            <li><a href="#/sendMessage" ng-if="isLoggedIn">Send Message</a>
+                            <li ng-if="isLoggedIn">
+                                <button class="btn pull-right" ng-click="logout()" >Logout</button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </nav>
+
+        <div ng-view="">
+
+        </div>
+
+    </div>
+    <script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+    <!-- <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script> -->
+    <script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+    <script src="angularJs.js"></script>
+
+</body>
+
+</html>

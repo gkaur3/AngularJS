@@ -1,0 +1,24 @@
+<html>
+    <body>
+            <table class="table table-bordered">
+                    <tr>
+                        <th>Message title</th>
+                        <th>Message body</th>
+                        <th>Sender</th>
+                        <th>Receiver</th>
+                        <th>Mark Important</th>
+                        <th>Delete</th>
+                        <th>Reply</th>
+                    </tr>
+                    <tr ng-repeat="message in messages">
+                        <td>{{message.message_title}}</td>
+                        <td>{{message.message_body}}</td>
+                        <td>{{message.sender}}</td>
+                        <td>{{message.receiver}}</td> 
+                        <td><button ng-click="isMarkedImp(message)">{{message.important}}</button></td>
+                        <td><button ng-click="deleteMessage(message)">Delete</button></td>
+                        <td><a href="#/sendMessage">reply to message</a></td>  
+                    </tr>
+            </table>
+    </body>
+</html>

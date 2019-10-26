@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <form style="margin-left: 30px">
+            <input type="text" name="message_title" placeholder="message Title" ng-model="message.message_title" required class="form-control" />
+            <br /><br />
+            <input type="text" name="message_body" placeholder="message body" ng-model="message.message_body" required
+                class="form-control" /> <br /><br />
+            <span>Sender :<a href="#/home" name="sender" ng-model="message.sender" style="font-size:18px">{{message.sender}}</a> </span><br /><br />
+            <!-- dropdown -->
+            <label>Send to:</label>
+            <select ng-model="users">
+                <option ng-repeat="x in users" value="{{x.username}}">{{x.username}}</option>
+            </select>
+            <br /><br />
+            <button type="submit" class="btn btn-primary" ng-click="sendMessage()">Send</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>    
+        <h3>Please fill the information to Sign Up</h3>
+        <div style="align-items:center">
+            <h4 ng-show="signupError">{{signupError}}</h4>
+        </div>
+            <form method="POST" style="margin-left:30px">
+                <input type="text" name="username" placeholder="username" ng-model="user.username" required class="form-control"/> <br/><br/>
+                <input type="password" name="password" placeholder="password" ng-model="user.password" required class="form-control"/> <br/><br/>
+                <input type="text" name="firstname" placeholder="firstname" ng-model="user.firstname" required class="form-control"/> <br/><br/>
+                <input type="text" name="lastname" placeholder="lastname" ng-model="user.lastname" required class="form-control"/> <br/><br/>
+                <input type="text" name="phone" placeholder="phone number" ng-model="user.phone" required class="form-control"/> <br/><br/>
+                <div>
+                    <input type="radio" value="male", name="gender" ng-click="user.selectGender($event)"/>Male
+                    <input type="radio" value="female", name="gender" ng-click="user.selectGender($event)"/>Female
+                </div>
+                <button type="submit" class="btn btn-primary" ng-click="signup()">Sign Up</button>
+            </form>
+    </body>
+</html>

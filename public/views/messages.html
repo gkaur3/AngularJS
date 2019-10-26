@@ -1,0 +1,16 @@
+<html>
+    <body>
+            <div ng-repeat="message in messages">
+                <label>Message title:</label> <span>{{message.message_title}}</span><br/>
+                <label>Message body:</label> <span>{{message.message_body}}</span><br/>
+                <label>Sender:</label> <span>{{message.sender}}</span><br/>
+                <label>Receiver: </label>
+                 <span>{{message.receiver}}</span><br/>
+                <label>mark as important:</label> <span><button ng-click="isMarkedImp(message)">{{message.important}}</button></span><br/>
+                <label><button ng-click="deleteMessage(message)">Delete</button></label><br/>
+                <a href="#/sendMessage">Send Message</a>&nbsp &nbsp
+                <a ng-href="#/messages/{{message._id}}">Details</a><br/>
+            </div>
+        
+    </body>
+</html> 
